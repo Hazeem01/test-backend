@@ -17,9 +17,19 @@ const routes = Router();
 // When a GET request is made to /welcome, the welcome function from the controller module will be called to handle the request.
 routes.get("/welcome", controller.welcome);
 
+routes.post("/create-user", controller.createUser);
+
+routes.get("/getUsers", controller.getUsers);    
+
+routes.post("/login", controller.login);
+
+routes.delete("/deleteUser", controller.deleteUser);
+
+routes.patch("/update", controller.update);
+
 // This line defines a POST route at the path /login on the routes router. 
 // When a POST request is made to /login, the login function from the controller module will be called to handle the request.
-routes.post("/login", controller.login);
+// routes.post("/login", controller.login);
 
 // This line exports the routes router object, making it available for import in other parts of the application. 
 // This allows you to mount the routes object onto an Express application instance or another router just as we've done in the main file (app.js).
